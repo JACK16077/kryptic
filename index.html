@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kryptic</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img class="logo" src="/assets/logo.png" alt="logo">         
+    </header>
+    <main class="encriptador">
+        <section class="encriptador_contenido_izquierdo">
+            <textarea class="text_area" id="valorUsuario" type = "text"  cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="botones">
+                <button onclick="encriptar();" class="btn_encriptar nes-btn is-primary" id="btnEncriptar">Encriptar</button>
+                <button onclick="desencriptar();" class="btn_desencriptar nes-btn is-error">Descifrar</button>                
+            </div>
+        </section>
+        <section class="encriptador_contenido_derecho">
+            <textarea class="text_mensaje" id="mensaje" cols="30" rows="10" readonly></textarea>
+            <div class="encriptador_mensaje_inicial" id="mensajeInicial">
+                <img class="picture" src="/assets/hacker.png" alt="hacker">
+                 <h6 class="encriptador_mensaje_titulo nes-text is-error">Ningun mensaje fue encontrado</h6>                 
+                 <p class="encriptador_mensaje_parrafo nes-text is-disabled">Ingresa el texto que desees encriptar o descifrar</p>              
+            </div>
+            <button class="copiar nes-btn is-warning" id="btnCopiar"
+            style="display:none;">Copiar</button>                
+        </section>
+    </main>
+    <footer class="nes-text is-disabled">
+        Desarrollado por J-Tech
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
